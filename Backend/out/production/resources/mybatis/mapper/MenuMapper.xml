@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.ysu.model.dao.MenuDAO">
+
+    <!-- 사용자 -->
+    <!-- 전체 메뉴 뷰 -->
+    <select id="UserMenuList" resultType="com.example.ysu.model.dto.MenuDTO">
+        SELECT * FROM menu WHERE menu_regist = 1;
+    </select>
+
+    <!-- 메뉴 상세 -->
+    <select id="getMenuById" parameterType="java.lang.Long" resultType="com.example.ysu.model.dto.MenuDTO">
+        SELECT * FROM menu WHERE menu_id = #{menuId};
+    </select>
+
+    <!-- 관리자 전체 메뉴 검색 -->
+    <select id="AdminMenuList" resultType="com.example.ysu.model.dto.MenuDTO">
+        select * from menu where menu_date between '2023-12-18' and '2023-12-22';
+    </select>
+
+    <!-- 지난 메뉴 확인 -->
+    <select id="AdminLastMenuList" resultType="com.example.ysu.model.dto.MenuDTO">
+        select * from menu;
+    </select>
+
+    <!-- 메뉴 등록 -->
+    <insert id="MenuInsert" parameterType="com.example.ysu.model.dto.MenuDTO">
+        insert into menu (menu_name, menu_corner, menu_price, menu_pack, menu_image, menu_sales, menu_regist, menu_date) values
+        (#{menu_name}, #{menu_corner}, #{menu_price}, #{menu_pack}, #{menu_image},  1, 1, DATE(CURRENT_TIMESTAMP));
+    </insert>
+
+    <!-- 선택 메뉴 수정-->
+    <update id="MenuUpdate" parameterType="com.example.ysu.model.dto.MenuDTO">
+        UPDATE menu SET menu_name = #{menu_name}, menu_corner = #{menu_corner}, menu_price = #{menu_price},
+        menu_pack = #{menu_pack}, menu_image = #{menu_image}, menu_sales = #{menu_sales}, menu_regist = #{menu_regist}
+        WHERE menu_id = #{menu_id}
+    </update>
+
+</mapper>

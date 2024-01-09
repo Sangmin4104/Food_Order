@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.ysu.model.dao.UserDAO">
+
+    <select id="UserList" resultType="com.example.ysu.model.dto.UserDTO">
+        SELECT * FROM users;
+    </select>
+
+    <select id="getUserByUId" parameterType="String" resultType="com.example.ysu.model.dto.UserDTO">
+        SELECT * FROM users WHERE u_id = #{u_id}
+    </select>
+
+</mapper>
