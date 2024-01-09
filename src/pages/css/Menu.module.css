@@ -1,0 +1,568 @@
+/* html {
+    width: 100%;
+    height: 100%;
+    font-family: 'NotoSans';
+} */
+
+body {
+    margin: 0;
+    background-color: #f1f1f1;
+    font-family: 'NotoSans';
+}
+
+.mnbody {
+    margin: 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    font-family: 'NotoSans';
+}
+
+.head {
+    box-sizing: border-box;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 15px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    /* 다른 요소 위에 보이도록 설정 */
+}
+
+.link {
+    text-decoration: none;
+}
+
+.logo {
+    width: 100%;
+    max-width: 140px;
+    margin: 0 auto;
+    /* 로고를 가운데에 고정 */
+}
+
+.faArrowLeft,
+.faCartShopping,
+.faArrowRightFromBracket,
+.faArrowRightFromBracket {
+    width: 100%;
+    min-width: 28px;
+    min-height: 28px;
+    max-width: 35px;
+    font-size: 1.5em;
+    color: rgb(42, 52, 55);
+    display: flex;
+    align-items: center;
+}
+
+.noMenusImg {
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+.noMenus {
+    width: 100%;
+    height: 60vh;
+    padding: 10px;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 1rem;
+    text-align: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+}
+
+.noMenus p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menuNav .menuUl {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 60px;
+    left: 0;
+    height: 80px;
+    background-color: #f1f1f1;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+    z-index: 1000;
+    /* 다른 요소 위에 보이도록 설정 */
+}
+
+.menuList #S.active,
+.menuList #B.active,
+.menuList #F.active {
+    height: auto;
+}
+
+.menuList #S.hidden,
+.menuList .hidden,
+.menuList .hidden {
+    display: none;
+}
+
+.menuList button:hover {
+    background-color: #dfdfdf;
+    transition: 0.7s;
+}
+
+.menuList p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menuHr {
+    width: 100%;
+}
+
+.li {
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    height: 100%;
+}
+
+li a span {
+    font-weight: 500;
+    color: #555;
+}
+
+li a.active,
+li a.active span {
+    background-color: #555;
+    color: white;
+}
+
+li a:hover:not(.active),
+li a:hover:not(.active) span {
+    background-color: #555;
+    color: white;
+}
+
+li a:hover {
+    background-color: #555;
+    /* rgb(42, 52, 55) */
+    color: white;
+}
+
+.menuList button {
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.menuList button:hover {
+    background-color: #dfdfdf;
+    transition: 0.7s;
+}
+
+.menuList .hidden {
+    display: none;
+}
+
+.menuInfo div {}
+
+.soldOutOverlay {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+
+.soldOutOverlay img {
+    flex: 1;
+}
+
+.soldOutOverlay::before {
+    content: 'Sold Out';
+    position: absolute;
+    font-weight: bolder;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    background: rgba(0, 0, 0, 0.4);
+    /* 배경색과 투명도를 조절하세요 */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.selectMenu {
+    margin-top: 155px;
+    margin-right: 50px;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    color: black;
+}
+
+.selectoption {
+    width: 220px;
+}
+
+.selectoptionP {
+    width: 220px;
+    opacity: 0;
+}
+
+.selectoption:hover,
+.selectoption:focus {
+    background-color: #f1f1f1;
+    /* 마우스를 올렸을 때와 포커스 시 배경색 변경 */
+    outline: none;
+    /* 포커스 효과 제거 */
+}
+
+.selectoption option {
+    font-size: 14px;
+    padding: 8px;
+    background-color: #f1f1f1;
+}
+
+.selectoption option:hover {
+    background-color: #f1f1f1;
+}
+
+.priceIcons {
+    display: flex;
+    align-items: center;
+}
+
+.blueCircle,
+.greenCircle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.blueCircle {
+    background-color: rgb(80, 176, 209);
+}
+
+.greenCircle {
+    background-color: rgb(181, 220, 16);
+}
+
+.MainpriceIcons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.MainblueCircle,
+.MaingreenCircle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.MainblueCircle {
+    background-color: rgb(80, 176, 209);
+    margin-left: 30px;
+}
+
+.MaingreenCircle {
+    background-color: rgb(181, 220, 16);
+}
+
+.CircleText {
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    .menuList button {
+        height: 312.19px;
+    }
+
+    .menuList img {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        min-width: 200px;
+        min-height: 200px;
+        max-height: 500px;
+        max-width: 500px;
+        border-radius: 10%;
+        margin-bottom: 10px;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .menuInfo {
+        padding-left: 10px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menuCircle {
+        font-size: 17px;
+    }
+
+    .menuList {
+        height: 100%;
+        padding: 15px;
+        margin-top: 140px;
+        border-radius: 6px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+    }
+
+    .menuInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menuName {
+        font-size: 17px;
+        margin-top: 10px;
+        margin-bottom: 9px;
+        font-weight: 600;
+    }
+
+    .menuPrice {
+        font-size: 15px;
+        margin-bottom: 15px;
+        font-family: 'NotoSans';
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .head {
+        height: 50px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    li a {
+        font-size: 15px;
+    }
+
+    .menuList {
+        display: grid;
+        grid-template-columns: 1fr;
+        color: black;
+    }
+
+    .menuList img {
+        object-fit: cover;
+        width: 90px;
+        height: 90px;
+        border-radius: 10%;
+        min-width: 90px;
+        min-height: 90px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .menuNav .menuUl {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        top: 49px;
+        width: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 80px;
+        overflow: auto;
+        align-items: center;
+        white-space: normal;
+        white-space: normal;
+    }
+
+    .menuHr {
+        display: none;
+    }
+
+    .menuList button {
+        margin: 0 auto;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        place-content: center;
+        justify-content: flex-start;
+        font-size: 1.2rem;
+        width: 100%;
+        color: black;
+    }
+
+    .menuInfo {
+        padding-left: 18px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menuList {
+        height: 100%;
+        padding: 15px;
+        margin-top: 130px;
+        border-radius: 6px;
+        display: grid;
+        grid-gap: 15px;
+    }
+
+    .adminMenuList {
+        height: 100%;
+        padding: 20px;
+        border-radius: 6px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+    }
+
+    .menuInfo div {}
+
+    .menuName {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 9px;
+        font-weight: 600;
+    }
+
+    .menuPrice {
+        font-size: 15px;
+        margin-bottom: 45px;
+    }
+
+    .soldOutOverlay::before {
+        font-size: 1.2em;
+    }
+
+    .MainpriceIcons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .MainblueCircle,
+    .MaingreenCircle {
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        margin-right: 10px;
+    }
+
+    .MainblueCircle {
+        background-color: rgb(80, 176, 209);
+        margin-left: 30px;
+    }
+
+    .MaingreenCircle {
+        background-color: rgb(181, 220, 16);
+    }
+
+    .CircleText {
+        margin-right: 20px;
+        font-size: 15px;
+    }
+
+    /* .priceIcons {
+        display: flex;
+        align-items: center;
+        margin-top:-30px;
+        justify-content: flex-end;
+    } */
+
+    .blueCircle,
+    .greenCircle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    .blueCircle {
+        background-color: rgb(80, 176, 209);
+    }
+
+    .greenCircle {
+        background-color: rgb(181, 220, 16);
+    }
+
+    .CircleText {
+        font-size: 13.5px;
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+
+    .selectoption {
+        width: 200px;
+        font-size: 11px;
+        margin-right: -20px;
+    }
+
+    .selectoptionP {
+        width: 200px;
+        font-size: 11px;
+        margin-right: -20px;
+        opacity: 0;
+    }
+
+    .selectMenu {
+        margin-top: 145px;
+        margin-right: 50px;
+        display: flex;
+        align-items: right;
+        justify-content: space-between;
+    }
+
+}

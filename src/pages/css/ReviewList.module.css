@@ -1,0 +1,174 @@
+.noReviewsImg {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-top: 160px;
+}
+
+.noReviews {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 1rem;
+    text-align: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
+}
+
+.noReviews p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 700px) {
+    .reviewCard {
+        margin-top: 80px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        /* position: relative; */
+    }
+
+    .reviewItem {
+        width: 100%;
+        height: 200px;
+        /* align-items: center; */
+        display: contents;
+    }
+
+    .reviewInfo {
+        width: 100%;
+        height: 20%;
+        margin-bottom: 10px;
+    }
+
+    .reviewFix {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .userName {
+        margin-right: 5px;
+        font-weight: bold;
+    }
+
+    .reviewRate {
+        font-size: small;
+        margin-right: 5px;
+    }
+
+    .reviewTime {
+        font-size: 12px;
+        /* 날짜 폰트 크기 조정 */
+
+    }
+
+    .contentBox {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .reviewWriting {
+        text-align: left;
+        padding-bottom: 10%;
+        width: 60%;
+        height: 100%;
+    }
+
+    .reviewImgList {
+        width: 50%;
+        display: flex;
+        justify-content: right;
+    }
+
+    .reviewImg {
+        height: 150px;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin-right: 20px;
+        justify-content: right;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .reviewCard {
+        margin-top: 70px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .reviewItem {
+        width: 100%;
+        height: 200px;
+        /* align-items: center; */
+        display: contents;
+    }
+
+    .reviewInfo {
+        width: 100%;
+        height: 20%;
+        margin-bottom: 10px;
+    }
+
+    .reviewFix {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .userName {
+        margin-right: 5px;
+        font-weight: bold;
+        margin-bottom: 2%;
+    }
+
+    .reviewRate {
+        font-size: small;
+        margin-right: 5px;
+    }
+
+    .reviewTime {
+        font-size: 12px;
+        /* 날짜 폰트 크기 조정 */
+    }
+
+    .reviewWriting {
+        text-align: left;
+        padding-bottom: 4%;
+        height: 100%;
+    }
+
+    .reviewImgList {
+        width: 50%;
+        display: flex;
+    }
+
+    .reviewImg {
+        height: 180px;
+        width: auto;
+        margin-right: 20px;
+        justify-content: right;
+        position: relative;
+        
+        /* margin-bottom: 10px; */
+    }
+
+    .noReviewsImg { 
+        margin-top: 130px;
+    }
+}
