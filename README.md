@@ -2,6 +2,20 @@
 
 <strong>학식 주문 앱을 통해 음식 주문, 결제 및 리뷰 기능을 제공하여 편의성을 증대하고 식당 운영을 효율화할 수 있는 서비스</strong>
 
+<br>
+
+## 💻이런 기술들을 사용했어요!
+<P>
+  <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=REACT&logoColor=black">
+  <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
+  <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white">
+  <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=MySQL&logoColor=white">
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=GitHub&logoColor=white">
+</P>
+
+<br>
+
+## 주요 기능
 1. 식당 이용 · 포장 여부 선택 가능
 - 메뉴 주문 시 포장 또는 학생식당 이용 여부 선택 가능
 - 포장 시 주문한 음식을 포장하거나, 학생식당 내에서 먹을 수 있음
