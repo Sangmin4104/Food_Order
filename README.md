@@ -1,4 +1,4 @@
-# 학식 주문 서비스 프로젝트 🍽️
+# 🍽️ 학식 주문 서비스 프로젝트 🍽️
 
 <strong>학식 주문 앱을 통해 음식 주문, 결제 및 리뷰 기능을 제공하여 편의성을 증대하고 식당 운영을 효율화할 수 있는 서비스</strong>
 
@@ -8,8 +8,9 @@
 <P>
   <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=REACT&logoColor=black">
   <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
-  <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white">
+  <img src="https://img.shields.io/badge/spring boot-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white">
   <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=MySQL&logoColor=white">
+  <img src="https://img.shields.io/badge/intellij idea-000000?style=for-the-badge&logo=intellijidea&logoColor=white">
   <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=GitHub&logoColor=white">
 </P>
 
